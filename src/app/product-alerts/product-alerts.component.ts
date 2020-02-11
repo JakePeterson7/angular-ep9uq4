@@ -1,15 +1,24 @@
+//I'm having to make significant changes to the code 
+//that I cloned to make it follow the tutorial. No problems so far. 
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+//The below import isn't used in the tutorial.
+//import { products } from '../products';
 
 @Component({
-  selector: 'app-product-alerts',
-  templateUrl: './product-alerts.component.html',
-  styleUrls: ['./product-alerts.component.css']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export class ProductAlertsComponent implements OnInit {
-
+export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
   }
-
 }
+export class ProductAlertsComponent implements OnInit {
+  @Input() product;
+  constructor() { }
+
+  ngOnInit() {
+  }
